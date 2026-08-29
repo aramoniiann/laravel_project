@@ -27,3 +27,12 @@ php artisan db:seed CustomersSeeder
 php artisan db:seed CustomersSeeder
 php artisan db:seed CustomersSeeder
 exit
+exit
+php artisan migrate:fresh
+php artisan db:seed CustomersSeeder
+php artisan db:seed ProductSeeder
+php artisan migrate:fresh
+php artisan db:seed ProductSeeder
+php artisan db:seed CustomersSeeder
+php artisan db:seed CategorySeeder
+exit

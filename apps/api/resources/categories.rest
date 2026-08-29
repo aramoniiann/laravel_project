@@ -1,0 +1,33 @@
+
+
+@baseUri = http://localhost:8182/api 
+
+### index
+GET {{baseUri}}/categories HTTP/1.1
+content-type: application/json
+
+
+### store
+POST {{baseUri}}/categories HTTP/1.1
+content-type: application/json
+
+{
+    "name": "Categoria Nova",
+    "description": "Categoria criada via API/REST"
+}
+
+### show
+GET {{baseUri}}/categories/8 HTTP/1.1
+content-type: application/json
+
+### update
+PUT {{baseUri}}/categories/8 HTTP/1.1
+content-type: application/json
+
+{
+    "description": "Categoria ATUALIZADA via API/REST"
+}
+
+### delete 
+DELETE {{baseUri}}/categories/6 HTTP/1.1
+content-type: application/json

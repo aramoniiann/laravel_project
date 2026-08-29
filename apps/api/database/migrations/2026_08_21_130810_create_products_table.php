@@ -19,6 +19,7 @@ return new class extends Migration
             $table->integer('stock');
             $table->integer('position');
             $table->boolean('enabled')->default(true);
+            $table->foreignId('category_id')->nullable()->constrained();
             $table->timestamps();
         });
     }

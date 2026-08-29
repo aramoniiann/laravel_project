@@ -24,6 +24,7 @@ class ProductFactory extends Factory
             'stock' => fake()->numberBetween(0, 100),
             'position' => 0,
             'enabled' => fake()->boolean()
+            
         ];
     }
 }
