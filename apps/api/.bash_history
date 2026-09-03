@@ -39,3 +39,11 @@ exit
 exit
 git status
 exit
+php artisan make:model Order --fsm
+php artisan make:model Order -fsm
+php artisan make:controller OrderController --api --pest
+php artisan make:request OrderStoreRequest
+php artisan migrate
+php artisan make:request OrderUpdateRequest
+git status
+exit
