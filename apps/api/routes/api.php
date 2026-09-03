@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\CustomersController;
 use Illuminate\Support\Facades\Route;
 
 
@@ -22,3 +23,5 @@ use Illuminate\Support\Facades\Route;
 
 Route::apiResource('categories', CategoryController::class);
 Route::apiResource('products', ProductController::class);
+Route::apiResource('customers', CustomersController::class);
+//Route::put('customers/{customer}', [CustomersController::class, 'update']);

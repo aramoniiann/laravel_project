@@ -1,0 +1,34 @@
+@baseUri = http://localhost:8182/api 
+
+### index
+GET {{baseUri}}/customers HTTP/1.1
+content-type: application/json
+
+
+### store
+POST {{baseUri}}/customers HTTP/1.1
+content-type: application/json
+
+{
+    "name": "Produto Novo",
+    "description": "Produto criado via API/REST",
+    "price": 200.00,
+    "stock": 3,
+    "position": 1
+}
+
+### show
+GET {{baseUri}}/customers/8 HTTP/1.1
+content-type: application/json
+
+### update
+PUT {{baseUri}}/customers/8 HTTP/1.1
+content-type: application/json
+
+{
+    "name": "Cliente ATUALIZADO via API/REST"
+}
+
+### delete 
+DELETE {{baseUri}}/customers/6 HTTP/1.1
+content-type: application/json
