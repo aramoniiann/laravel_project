@@ -36,3 +36,4 @@ php artisan db:seed ProductSeeder
 php artisan db:seed CustomersSeeder
 php artisan db:seed CategorySeeder
 exit
+exit
