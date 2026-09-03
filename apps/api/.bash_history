@@ -37,3 +37,5 @@ php artisan db:seed CustomersSeeder
 php artisan db:seed CategorySeeder
 exit
 exit
+git status
+exit

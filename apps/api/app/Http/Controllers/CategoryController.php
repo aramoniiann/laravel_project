@@ -21,15 +21,15 @@ class CategoryController extends Controller
      */
     public function store(CategoryStoreRequest $request)
     {
-        $category = new Category();
-        $category->name = $request->name;
-        $category->description = $request->description;
+        // $category = new Category();
+        // $category->name = $request->name;
+        // $category->description = $request->description;
 
-        $category->save();
+        // $category->save();
 
-        // $data = $request->validated();
+        $data = $request->validated();
 
-        // $category = Category::create($data);
+        $category = Category::create($data);
 
         return $category;
     }
