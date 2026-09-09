@@ -47,3 +47,15 @@ php artisan migrate
 php artisan make:request OrderUpdateRequest
 git status
 exit
+php artisan db:seed ReviewSeeder
+php artisan db:seed ReviewSeeder
+php artisan db:seed ReviewSeeder
+php artisan db:seed ReviewSeeder
+php artisan db:seed ReviewSeeder
+php artisan db:seed ReviewSeeder
+php artisan db:seed ReviewSeeder
+php artisan db:seed ReviewSeeder
+php artisan make:controller ReviewController --api --pest
+php artisan route:list
+php artisan make:request ReviewStoreRequest
+exit
