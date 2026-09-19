@@ -1,13 +1,13 @@
-@baseUri = http://localhost:8182/api 
-
 ### index
 GET {{baseUri}}/customers HTTP/1.1
 content-type: application/json
+Authorization: Bearer {{accessToken}}
 
 
 ### store
 POST {{baseUri}}/customers HTTP/1.1
 content-type: application/json
+Authorization: Bearer {{accessToken}}
 
 {
     "name": "Produto Novo",
@@ -20,10 +20,12 @@ content-type: application/json
 ### show
 GET {{baseUri}}/customers/8 HTTP/1.1
 content-type: application/json
+Authorization: Bearer {{accessToken}}
 
 ### update
 PUT {{baseUri}}/customers/8 HTTP/1.1
 content-type: application/json
+Authorization: Bearer {{accessToken}}
 
 {
     "name": "Cliente ATUALIZADO via API/REST"
@@ -32,3 +34,4 @@ content-type: application/json
 ### delete 
 DELETE {{baseUri}}/customers/6 HTTP/1.1
 content-type: application/json
+Authorization: Bearer {{accessToken}}

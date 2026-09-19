@@ -1,15 +1,12 @@
-
-
-@baseUri = http://localhost:8182/api 
-
 ### index
 GET {{baseUri}}/categories HTTP/1.1
 content-type: application/json
-
+Authorization: Bearer {{accessToken}}
 
 ### store
 POST {{baseUri}}/categories HTTP/1.1
 content-type: application/json
+Authorization: Bearer {{accessToken}}
 
 {
     "description": "Categoria criada via API/REST"
@@ -18,15 +15,18 @@ content-type: application/json
 ### show
 GET {{baseUri}}/categories/8 HTTP/1.1
 content-type: application/json
+Authorization: Bearer {{accessToken}}
 
 ### update
 PUT {{baseUri}}/categories/8 HTTP/1.1
 content-type: application/json
+Authorization: Bearer {{accessToken}}
 
 {
     "description": "Categoria ATUALIZADA via API/REST"
 }
 
-### delete 
+### delete
 DELETE {{baseUri}}/categories/6 HTTP/1.1
 content-type: application/json
+Authorization: Bearer {{accessToken}}

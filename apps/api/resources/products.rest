@@ -1,15 +1,13 @@
-
-
-@baseUri = http://localhost:8182/api 
-
 ### index
 GET {{baseUri}}/products HTTP/1.1
 content-type: application/json
+Authorization: Bearer {{accessToken}}
 
 
 ### store
 POST {{baseUri}}/products HTTP/1.1
 content-type: application/json
+Authorization: Bearer {{accessToken}}
 
 {
     "name": "Produto Novo",
@@ -21,10 +19,12 @@ content-type: application/json
 ### show
 GET {{baseUri}}/products/8 HTTP/1.1
 content-type: application/json
+Authorization: Bearer {{accessToken}}
 
 ### update
 PUT {{baseUri}}/products/8 HTTP/1.1
 content-type: application/json
+Authorization: Bearer {{accessToken}}
 
 {
     "description": "Produto ATUALIZADO via API/REST"
@@ -33,3 +33,4 @@ content-type: application/json
 ### delete 
 DELETE {{baseUri}}/products/6 HTTP/1.1
 content-type: application/json
+Authorization: Bearer {{accessToken}}

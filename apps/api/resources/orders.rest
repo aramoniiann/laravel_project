@@ -1,14 +1,14 @@
-@baseUri = http://localhost:8182/api
-
-### Listar todos as orders
+###Get
 GET {{baseUri}}/orders HTTP/1.1
 Content-Type: application/json
+Authorization: Bearer {{accessToken}}
 
 
 
-### Criar uma nova order
+###Create
 POST {{baseUri}}/orders HTTP/1.1
 Content-Type: application/json
+Authorization: Bearer {{accessToken}}
 
 {
   "customer_id": 1,
@@ -17,13 +17,15 @@ Content-Type: application/json
 }
 
 
-### Buscar um order por ID
+###Get
 GET {{baseUri}}/orders/1 HTTP/1.1
 Content-Type: application/json
+Authorization: Bearer {{accessToken}}
 
-### Atualizar um order existente
+###Update
 PUT {{baseUri}}/orders/1 HTTP/1.1
 Content-Type: application/json
+Authorization: Bearer {{accessToken}}
 
 {
   "customer_id": 1,
@@ -31,6 +33,7 @@ Content-Type: application/json
   "total": "150.50"
 }
 
-### Deletar um order
+###Delete
 DELETE {{baseUri}}/orders/1 HTTP/1.1
 Content-Type: application/json
+Authorization: Bearer {{accessToken}}

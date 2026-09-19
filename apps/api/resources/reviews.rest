@@ -1,15 +1,13 @@
-
-
-@baseUri = http://localhost:8182/api 
-
 ### index
 GET {{baseUri}}/reviews HTTP/1.1
 content-type: application/json
+Authorization: Bearer {{accessToken}}
 
 
 ### store
 POST {{baseUri}}/reviews HTTP/1.1
 content-type: application/json
+Authorization: Bearer {{accessToken}}
 
 {
     "product_id": 1,
@@ -21,10 +19,12 @@ content-type: application/json
 ### show
 GET {{baseUri}}/reviews/8 HTTP/1.1
 content-type: application/json
+Authorization: Bearer {{accessToken}}
 
 ### update
 PUT {{baseUri}}/reviews/8 HTTP/1.1
 content-type: application/json
+Authorization: Bearer {{accessToken}}
 
 {
     "description": " ATUALIZADO via API/REST"
@@ -33,3 +33,4 @@ content-type: application/json
 ### delete 
 DELETE {{baseUri}}/reviews/6 HTTP/1.1
 content-type: application/json
+Authorization: Bearer {{accessToken}}
