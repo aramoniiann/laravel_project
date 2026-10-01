@@ -59,3 +59,11 @@ php artisan make:controller ReviewController --api --pest
 php artisan route:list
 php artisan make:request ReviewStoreRequest
 exit
+yarn add axios
+pwd
+ls
+exit
+composer require dedoc/scramble
+php artisan vendor:publish --
+provider="Dedoc\Scramble\ScrambleServiceProvider" --tag="scramble-config"
+exit
