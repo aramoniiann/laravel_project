@@ -113,6 +113,7 @@ export default defineConfig((ctx) => {
       plugins: [
         'Dialog',
         'Notify',
+        'LocalStorage',
       ],
     },
 
