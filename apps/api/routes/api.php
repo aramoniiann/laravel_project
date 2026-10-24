@@ -6,9 +6,12 @@ use App\Http\Controllers\ProductController;
 use App\Http\Controllers\CustomersController;
 use App\Http\Controllers\OrderController;
 use App\Http\Controllers\ReviewController;
+use App\Http\Controllers\UploadController;
 use Illuminate\Support\Facades\Route;
 
 Route::post('auth/login', [AuthController::class, 'login']);
+
+Route::post('upload', [UploadController::class, 'upload']);
 
 Route::group([
     'middleware' => [
