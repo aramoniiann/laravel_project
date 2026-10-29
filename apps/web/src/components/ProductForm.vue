@@ -33,6 +33,20 @@
       label="Estoque"
       v-model="product.stock"
     />
+
+    <file-uploader
+      label="Imagem do produto"
+      accept="image/*"
+      @upload="(data) => product.image = data.url"
+    />
+    <div class="text-center">
+      <q-img
+        v-if="product.image"
+        :src="product.image"
+        width="25vw"
+      />
+    </div>
+
     <div class="full-width bg-grey-1 q-py-md">
       <q-btn-group spread flat>
         <q-btn
@@ -50,6 +64,7 @@
 </template>
 
 <script setup>
+import FileUploader from './FileUploader.vue';
 import InputMoney from './InputMoney.vue';
 
 const product = defineModel({
@@ -60,5 +75,6 @@ const product = defineModel({
   price: 0,
   stock: 0,
   saving: false,
+  image: null,
 })
 </script>

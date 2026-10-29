@@ -11,7 +11,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::post('auth/login', [AuthController::class, 'login']);
 
-Route::post('upload', [UploadController::class, 'upload']);
+Route::post('upload', UploadController::class);
 
 Route::group([
     'middleware' => [

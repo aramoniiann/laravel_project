@@ -7,10 +7,15 @@ use Illuminate\Http\Request;
 
 class UploadController extends Controller
 {
-    public function upload(UploadRequest $request): array
-    {
+    public function __invoke(
+        UploadRequest $request
+    ) {
         $path = $request->file('file')->store('uploads');
+        $url = Storage::url($path);
 
-        return ['path' => $path];
+        return [
+            'path' => $path,
+            'url' => $url,
+        ];
     }
 }

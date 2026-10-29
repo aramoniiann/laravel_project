@@ -27,6 +27,13 @@
         v-for="product in paging.data"
         :key="product.id"
       >
+        <q-item-section side>
+          <q-img
+            v-if="product.image"
+            :src="product.image"
+            width="20vw"
+          />
+        </q-item-section>
         <q-item-section>
           <q-item-label>
             {{ product.name }}

@@ -67,3 +67,4 @@ composer require dedoc/scramble
 php artisan vendor:publish --
 provider="Dedoc\Scramble\ScrambleServiceProvider" --tag="scramble-config"
 exit
+exit
